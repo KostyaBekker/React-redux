@@ -1,0 +1,36 @@
+.main__block {
+  background: rgb(241, 241, 241);
+    /* height: calc(100vh - 187px); */
+    margin: 0 -8px -8px -8px;
+    padding: 97px 97px 40px 97px;
+    font-family: sans-serif;
+    display: flex;
+}
+.filter__block {
+  border-right: 2px solid rgb(228, 228, 228);
+  padding-right: 353px;
+}
+.filter__block span {
+  font-size: 24px;
+}
+.result__block {
+  margin-left: 75px;
+}
+.result__block span {
+  font-size: 24px;
+}
+.item {
+  padding: 52px 0 45px 51px;
+  border-bottom: 2px solid rgb(228, 228, 228);
+}
+.items {
+  margin-top: 48px;
+  background: rgb(235, 235, 235);
+}
+.item span {
+  font-size: 28px;
+}
+.item p {
+  margin: 34px 0 46px 0;
+  font-size: 19px;
+}

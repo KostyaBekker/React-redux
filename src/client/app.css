@@ -1,0 +1,26 @@
+.form__wrap {
+  margin: 80px auto;
+  display: flex;
+  justify-content: center;
+}
+.form__wrap__login {
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form__wrap button{
+  margin: 24px 25%;
+}
+
+.isValidStyle {
+  border: 2px solid red;
+  box-shadow: 0px 0px 5px red;
+}
+.form__wrap button {
+  margin: 2px;
+}
+.MuiTableCell-root {
+  font-size: 12px !important;
+  padding: 2px !important;
+}
