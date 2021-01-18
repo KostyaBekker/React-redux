@@ -70,10 +70,8 @@ class Login extends Component {
     let isValidPhoneSingUp = true;
     const regPhone = /^380\d{3}\d{2}\d{2}\d{2}$/;
     const reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-    const regPas =
-      /([a-z]+[A-Z]+[0-9]+|[a-z]+[0-9]+[A-Z]+|[A-Z]+[a-z]+[0-9]+|[A-Z]+[0-9]+[a-z]+|[0-9]+[a-z]+[A-Z]+|[0-9]+[A-Z]+[a-z]+)/;
+    const regPas = /([a-z]+[A-Z]+[0-9]+|[a-z]+[0-9]+[A-Z]+|[A-Z]+[a-z]+[0-9]+|[A-Z]+[0-9]+[a-z]+|[0-9]+[a-z]+[A-Z]+|[0-9]+[A-Z]+[a-z]+)/;
     if ((reg.test(inputSingUp) === false) || (inputSingUp === '')) {
-      // document.querySelector('.isValidEmailSingUp').classList.add('isValidStyle');
       this.setState({ showFailInputSingUp: true });
       isValidLoginSingUp = false;
     }
@@ -87,9 +85,8 @@ class Login extends Component {
       this.setState({ showFailConfirmPassword: true });
     }
     if ((regPhone.test(phoneSingUp) === false) || (phoneSingUp === '')) {
-      // document.querySelector('.isValidEmailSingUp').classList.add('isValidStyle');
       this.setState({ showFailPhoneSingUp: true });
-      console.log('не корректный телефон');
+      // console.log('не корректный телефон');
       isValidPhoneSingUp = false;
     }
     if (isValidLoginSingUp && isValidPasswordSingUp && isValidConfirmPassword && isValidPhoneSingUp) {
@@ -110,13 +107,14 @@ class Login extends Component {
   };
 
   loginSingUp = (body) => {
+    console.log(body);
     if (this.isValidSingUp()) {
       this.props.auth(body);
       this.setState({
         input: '',
         password: ''
       });
-      console.log('loginSingUp', 'OK');
+      // console.log('loginSingUp', 'OK');
       this.setState({ status: 'logIn' });
     }
   };
@@ -136,7 +134,7 @@ class Login extends Component {
           onChange={e => this.hendelChangeSelect('nameCustomer', e.target.value)}
           value={nameCustomer}
         />
-      )
+      );
     }
   };
 
@@ -267,7 +265,7 @@ class Login extends Component {
           </span>
           <TextField
             label="Phone"
-            placeholder="3(80..)..."
+            placeholder="380..."
             onChange={e => this.hendelChangeSelect('phoneSingUp', e.target.value)}
             value={phoneSingUp}
           />

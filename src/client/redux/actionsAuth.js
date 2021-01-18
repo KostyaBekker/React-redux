@@ -25,6 +25,7 @@ async function postData(url = '', data = {}) {
 const login = (body, callBack) => {
   postData('https://prozorro.mavinx.com/api/test/login', body)
     .then((data) => {
+      console.log(data, body);
       if (data.token) {
         localStorage.setItem('appToken', JSON.stringify(data.token));
         callBack();
